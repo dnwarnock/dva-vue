@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <div class="left">
-      <google-map />
-    </div>
-    <div class="right">
-      <result-table />
+    <div class="md-layout">
+      <div class="left md-layout-item">
+        <google-map />
+      </div>
+      <div class="right md-layout-item">
+        <result-table />
+      </div>
     </div>
   </div>
 </template>
@@ -49,6 +51,7 @@ li {
   height: 100%;
   float: left;
   border-collapse: collapse;
+  padding:1em;
 }
 
 .right{
@@ -56,6 +59,7 @@ li {
   height: 100%;
   float: right;
   border-collapse: collapse;
+  padding:1em;
 }
 
 a {

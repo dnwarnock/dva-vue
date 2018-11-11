@@ -1,5 +1,5 @@
 <template>
-  <div><br/><br/><br/><br/><br/><br/><br/>
+  <div><br/>
     <md-table v-model="properties" md-sort="name" md-sort-order="asc" md-card>
       <md-table-toolbar>
         <h1 class="md-title">Results</h1>

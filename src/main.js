@@ -3,7 +3,8 @@ import App from './App.vue'
 
 import Vuex from 'vuex';
 import * as VueGoogleMaps from "vue2-google-maps";
-import VueMaterial from 'vue-material'
+
+
 import 'vue-material/dist/vue-material.min.css';
 
 Vue.use(VueGoogleMaps, {

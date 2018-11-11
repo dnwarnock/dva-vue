@@ -1,30 +1,25 @@
 <template>
   <div>
     <div>
-      <h2>Search</h2>
-      <label>
-        <!-- <gmap-autocomplete
-          @place_changed="setPlace">
-        </gmap-autocomplete> -->
         <form @submit.prevent="handleSearch">
-          <label>
-            <input type="address" placeholder="enter your address" v-model="address"/>
-          </label>
-          <button type="submit">submit</button>
+          <div class="md-layout">
+            <div class="md-layout-item">
+              <md-field md-inline>
+                <vue-awesomplete :ajax="ajax" v-model="address"></vue-awesomplete>
+                <md-input v-model="address" class="md-elevation-3" required="true" placeholder="1111 Your Address"></md-input>
+              </md-field>
+            </div>
+            <div class="md-layout-item">
+              <md-field>
+                <md-button type="submit" class="md-raised md-primary">submit</md-button>
+              </md-field>
+            </div>
+          </div>
         </form>
-        <!-- <button @click="addMarker">Add</button> -->
-      </label>
-      <br/>
-      <label>
-        <input 
-          type="checkbox" 
-          name="outline" 
-          v-on:change="removeOutline"
-        >
-        Outline County
-      </label>
-      <br/>
-
+        <label>
+          <input type="checkbox" name="outline" v-on:change="removeOutline">
+          Outline County
+        </label>
     </div>
     <br>
     <gmap-map
@@ -58,6 +53,8 @@ export default {
       markers: [],
       properties: [],
       address: "",
+      zip: 78730,
+      zips: [{value: '78730'}, {value: '78731'}, {value: '78756'}, {value: '78722'}, {value: '78735'}, {value: '78702'}, {value: '78701'}, {value: '78703'}, {value: '78704'}, {value: '78750'}, {value: '78759'}, {value: '78758'}, {value: '78757'}, {value: '78753'}, {value: '78752'}, {value: '78727'}, {value: '78723'}, {value: '78721'}, {value: '78742'}, {value: '78745'}, {value: '78749'}, {value: '78741'}, {value: '78729'}],
       currentPlace: null
     };
   },
@@ -104,3 +101,15 @@ export default {
   }
 };
 </script>
+<style>
+.border {
+  border-style: solid
+}
+.md-button {
+    margin: 36px;
+  }
+
+.md-input {
+  margin: 36px;
+}
+</style>
