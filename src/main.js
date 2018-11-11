@@ -8,7 +8,7 @@ import 'vue-material/dist/vue-material.min.css';
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: ",
+    key: "",
     libraries: "places" // necessary for places input
   }
 });

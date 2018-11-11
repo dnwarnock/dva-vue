@@ -4,6 +4,8 @@
 
 ## Build Setup
 
+Add your API key to line 11 of main.js then run:
+
 ``` bash
 # install dependencies
 npm install
