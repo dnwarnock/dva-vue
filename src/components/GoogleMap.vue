@@ -5,7 +5,6 @@
           <div class="md-layout">
             <div class="md-layout-item">
               <md-field md-inline>
-                <vue-awesomplete :ajax="ajax" v-model="address"></vue-awesomplete>
                 <md-input v-model="address" class="md-elevation-3" required="true" placeholder="1111 Your Address"></md-input>
               </md-field>
             </div>
